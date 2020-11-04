@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		63C85A2D25534C9D0034BB22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C85A2C25534C9D0034BB22 /* AppDelegate.swift */; };
+		63C85A2F25534C9D0034BB22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C85A2E25534C9D0034BB22 /* SceneDelegate.swift */; };
+		63C85A3125534C9D0034BB22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C85A3025534C9D0034BB22 /* ViewController.swift */; };
+		63C85A3425534C9D0034BB22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63C85A3225534C9D0034BB22 /* Main.storyboard */; };
+		63C85A3625534CA20034BB22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63C85A3525534CA20034BB22 /* Assets.xcassets */; };
+		63C85A3925534CA20034BB22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63C85A3725534CA20034BB22 /* LaunchScreen.storyboard */; };
+		63C85A4425534CA30034BB22 /* dolap_ios_case_studyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C85A4325534CA30034BB22 /* dolap_ios_case_studyTests.swift */; };
+		63C85A4F25534CA30034BB22 /* dolap_ios_case_studyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C85A4E25534CA30034BB22 /* dolap_ios_case_studyUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		63C85A4025534CA30034BB22 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63C85A2125534C9D0034BB22 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63C85A2825534C9D0034BB22;
+			remoteInfo = "dolap-ios-case-study";
+		};
+		63C85A4B25534CA30034BB22 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63C85A2125534C9D0034BB22 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63C85A2825534C9D0034BB22;
+			remoteInfo = "dolap-ios-case-study";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		63C85A2925534C9D0034BB22 /* dolap-ios-case-study.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dolap-ios-case-study.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		63C85A2C25534C9D0034BB22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		63C85A2E25534C9D0034BB22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		63C85A3025534C9D0034BB22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		63C85A3325534C9D0034BB22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		63C85A3525534CA20034BB22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		63C85A3825534CA20034BB22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		63C85A3A25534CA20034BB22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63C85A3F25534CA30034BB22 /* dolap-ios-case-studyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "dolap-ios-case-studyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		63C85A4325534CA30034BB22 /* dolap_ios_case_studyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dolap_ios_case_studyTests.swift; sourceTree = "<group>"; };
+		63C85A4525534CA30034BB22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63C85A4A25534CA30034BB22 /* dolap-ios-case-studyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "dolap-ios-case-studyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		63C85A4E25534CA30034BB22 /* dolap_ios_case_studyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dolap_ios_case_studyUITests.swift; sourceTree = "<group>"; };
+		63C85A5025534CA30034BB22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		63C85A2625534C9D0034BB22 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63C85A3C25534CA30034BB22 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63C85A4725534CA30034BB22 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		63C85A2025534C9D0034BB22 = {
+			isa = PBXGroup;
+			children = (
+				63C85A2B25534C9D0034BB22 /* dolap-ios-case-study */,
+				63C85A4225534CA30034BB22 /* dolap-ios-case-studyTests */,
+				63C85A4D25534CA30034BB22 /* dolap-ios-case-studyUITests */,
+				63C85A2A25534C9D0034BB22 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		63C85A2A25534C9D0034BB22 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63C85A2925534C9D0034BB22 /* dolap-ios-case-study.app */,
+				63C85A3F25534CA30034BB22 /* dolap-ios-case-studyTests.xctest */,
+				63C85A4A25534CA30034BB22 /* dolap-ios-case-studyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		63C85A2B25534C9D0034BB22 /* dolap-ios-case-study */ = {
+			isa = PBXGroup;
+			children = (
+				63C85A2C25534C9D0034BB22 /* AppDelegate.swift */,
+				63C85A2E25534C9D0034BB22 /* SceneDelegate.swift */,
+				63C85A3025534C9D0034BB22 /* ViewController.swift */,
+				63C85A3225534C9D0034BB22 /* Main.storyboard */,
+				63C85A3525534CA20034BB22 /* Assets.xcassets */,
+				63C85A3725534CA20034BB22 /* LaunchScreen.storyboard */,
+				63C85A3A25534CA20034BB22 /* Info.plist */,
+			);
+			path = "dolap-ios-case-study";
+			sourceTree = "<group>";
+		};
+		63C85A4225534CA30034BB22 /* dolap-ios-case-studyTests */ = {
+			isa = PBXGroup;
+			children = (
+				63C85A4325534CA30034BB22 /* dolap_ios_case_studyTests.swift */,
+				63C85A4525534CA30034BB22 /* Info.plist */,
+			);
+			path = "dolap-ios-case-studyTests";
+			sourceTree = "<group>";
+		};
+		63C85A4D25534CA30034BB22 /* dolap-ios-case-studyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				63C85A4E25534CA30034BB22 /* dolap_ios_case_studyUITests.swift */,
+				63C85A5025534CA30034BB22 /* Info.plist */,
+			);
+			path = "dolap-ios-case-studyUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		63C85A2825534C9D0034BB22 /* dolap-ios-case-study */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63C85A5325534CA30034BB22 /* Build configuration list for PBXNativeTarget "dolap-ios-case-study" */;
+			buildPhases = (
+				63C85A2525534C9D0034BB22 /* Sources */,
+				63C85A2625534C9D0034BB22 /* Frameworks */,
+				63C85A2725534C9D0034BB22 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "dolap-ios-case-study";
+			productName = "dolap-ios-case-study";
+			productReference = 63C85A2925534C9D0034BB22 /* dolap-ios-case-study.app */;
+			productType = "com.apple.product-type.application";
+		};
+		63C85A3E25534CA30034BB22 /* dolap-ios-case-studyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63C85A5625534CA30034BB22 /* Build configuration list for PBXNativeTarget "dolap-ios-case-studyTests" */;
+			buildPhases = (
+				63C85A3B25534CA30034BB22 /* Sources */,
+				63C85A3C25534CA30034BB22 /* Frameworks */,
+				63C85A3D25534CA30034BB22 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				63C85A4125534CA30034BB22 /* PBXTargetDependency */,
+			);
+			name = "dolap-ios-case-studyTests";
+			productName = "dolap-ios-case-studyTests";
+			productReference = 63C85A3F25534CA30034BB22 /* dolap-ios-case-studyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		63C85A4925534CA30034BB22 /* dolap-ios-case-studyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63C85A5925534CA30034BB22 /* Build configuration list for PBXNativeTarget "dolap-ios-case-studyUITests" */;
+			buildPhases = (
+				63C85A4625534CA30034BB22 /* Sources */,
+				63C85A4725534CA30034BB22 /* Frameworks */,
+				63C85A4825534CA30034BB22 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				63C85A4C25534CA30034BB22 /* PBXTargetDependency */,
+			);
+			name = "dolap-ios-case-studyUITests";
+			productName = "dolap-ios-case-studyUITests";
+			productReference = 63C85A4A25534CA30034BB22 /* dolap-ios-case-studyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		63C85A2125534C9D0034BB22 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					63C85A2825534C9D0034BB22 = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					63C85A3E25534CA30034BB22 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = 63C85A2825534C9D0034BB22;
+					};
+					63C85A4925534CA30034BB22 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = 63C85A2825534C9D0034BB22;
+					};
+				};
+			};
+			buildConfigurationList = 63C85A2425534C9D0034BB22 /* Build configuration list for PBXProject "dolap-ios-case-study" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 63C85A2025534C9D0034BB22;
+			productRefGroup = 63C85A2A25534C9D0034BB22 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				63C85A2825534C9D0034BB22 /* dolap-ios-case-study */,
+				63C85A3E25534CA30034BB22 /* dolap-ios-case-studyTests */,
+				63C85A4925534CA30034BB22 /* dolap-ios-case-studyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		63C85A2725534C9D0034BB22 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63C85A3925534CA20034BB22 /* LaunchScreen.storyboard in Resources */,
+				63C85A3625534CA20034BB22 /* Assets.xcassets in Resources */,
+				63C85A3425534C9D0034BB22 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63C85A3D25534CA30034BB22 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63C85A4825534CA30034BB22 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		63C85A2525534C9D0034BB22 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63C85A3125534C9D0034BB22 /* ViewController.swift in Sources */,
+				63C85A2D25534C9D0034BB22 /* AppDelegate.swift in Sources */,
+				63C85A2F25534C9D0034BB22 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63C85A3B25534CA30034BB22 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63C85A4425534CA30034BB22 /* dolap_ios_case_studyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63C85A4625534CA30034BB22 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63C85A4F25534CA30034BB22 /* dolap_ios_case_studyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		63C85A4125534CA30034BB22 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 63C85A2825534C9D0034BB22 /* dolap-ios-case-study */;
+			targetProxy = 63C85A4025534CA30034BB22 /* PBXContainerItemProxy */;
+		};
+		63C85A4C25534CA30034BB22 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 63C85A2825534C9D0034BB22 /* dolap-ios-case-study */;
+			targetProxy = 63C85A4B25534CA30034BB22 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		63C85A3225534C9D0034BB22 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63C85A3325534C9D0034BB22 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		63C85A3725534CA20034BB22 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63C85A3825534CA20034BB22 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		63C85A5125534CA30034BB22 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		63C85A5225534CA30034BB22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		63C85A5425534CA30034BB22 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZG5R3ALCJD;
+				INFOPLIST_FILE = "dolap-ios-case-study/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chillxcode.dolap-ios-case-study";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		63C85A5525534CA30034BB22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZG5R3ALCJD;
+				INFOPLIST_FILE = "dolap-ios-case-study/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chillxcode.dolap-ios-case-study";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		63C85A5725534CA30034BB22 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZG5R3ALCJD;
+				INFOPLIST_FILE = "dolap-ios-case-studyTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chillxcode.dolap-ios-case-studyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/dolap-ios-case-study.app/dolap-ios-case-study";
+			};
+			name = Debug;
+		};
+		63C85A5825534CA30034BB22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZG5R3ALCJD;
+				INFOPLIST_FILE = "dolap-ios-case-studyTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chillxcode.dolap-ios-case-studyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/dolap-ios-case-study.app/dolap-ios-case-study";
+			};
+			name = Release;
+		};
+		63C85A5A25534CA30034BB22 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZG5R3ALCJD;
+				INFOPLIST_FILE = "dolap-ios-case-studyUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chillxcode.dolap-ios-case-studyUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "dolap-ios-case-study";
+			};
+			name = Debug;
+		};
+		63C85A5B25534CA30034BB22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZG5R3ALCJD;
+				INFOPLIST_FILE = "dolap-ios-case-studyUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chillxcode.dolap-ios-case-studyUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "dolap-ios-case-study";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		63C85A2425534C9D0034BB22 /* Build configuration list for PBXProject "dolap-ios-case-study" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63C85A5125534CA30034BB22 /* Debug */,
+				63C85A5225534CA30034BB22 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63C85A5325534CA30034BB22 /* Build configuration list for PBXNativeTarget "dolap-ios-case-study" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63C85A5425534CA30034BB22 /* Debug */,
+				63C85A5525534CA30034BB22 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63C85A5625534CA30034BB22 /* Build configuration list for PBXNativeTarget "dolap-ios-case-studyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63C85A5725534CA30034BB22 /* Debug */,
+				63C85A5825534CA30034BB22 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63C85A5925534CA30034BB22 /* Build configuration list for PBXNativeTarget "dolap-ios-case-studyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63C85A5A25534CA30034BB22 /* Debug */,
+				63C85A5B25534CA30034BB22 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 63C85A2125534C9D0034BB22 /* Project object */;
+}
