@@ -17,6 +17,11 @@
 		6392CDB7255436DC005E0831 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392CDB1255436DC005E0831 /* ProductDetailViewController.swift */; };
 		6392CDB8255436DC005E0831 /* ProductDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392CDB2255436DC005E0831 /* ProductDetailInteractor.swift */; };
 		6392CDC925543929005E0831 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392CDC825543929005E0831 /* SceneDelegate.swift */; };
+		6392CDCF25543D08005E0831 /* product.json in Resources */ = {isa = PBXBuildFile; fileRef = 6392CDCE25543D08005E0831 /* product.json */; };
+		6392CDD725543D3E005E0831 /* social.json in Resources */ = {isa = PBXBuildFile; fileRef = 6392CDD625543D3E005E0831 /* social.json */; };
+		6392CDDC25543E4B005E0831 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392CDDB25543E4B005E0831 /* FileManager.swift */; };
+		6392CDE225543ED3005E0831 /* FileManagerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392CDE125543ED3005E0831 /* FileManagerError.swift */; };
+		6392CDF325546CA1005E0831 /* FileManagerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392CDF225546CA1005E0831 /* FileManagerResponse.swift */; };
 		63C85A2D25534C9D0034BB22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C85A2C25534C9D0034BB22 /* AppDelegate.swift */; };
 		63C85A3625534CA20034BB22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63C85A3525534CA20034BB22 /* Assets.xcassets */; };
 		63C85A3925534CA20034BB22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63C85A3725534CA20034BB22 /* LaunchScreen.storyboard */; };
@@ -52,6 +57,11 @@
 		6392CDB1255436DC005E0831 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		6392CDB2255436DC005E0831 /* ProductDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailInteractor.swift; sourceTree = "<group>"; };
 		6392CDC825543929005E0831 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6392CDCE25543D08005E0831 /* product.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = product.json; sourceTree = "<group>"; };
+		6392CDD625543D3E005E0831 /* social.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = social.json; sourceTree = "<group>"; };
+		6392CDDB25543E4B005E0831 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		6392CDE125543ED3005E0831 /* FileManagerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerError.swift; sourceTree = "<group>"; };
+		6392CDF225546CA1005E0831 /* FileManagerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerResponse.swift; sourceTree = "<group>"; };
 		63C85A2925534C9D0034BB22 /* dolap-ios-case-study.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dolap-ios-case-study.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C85A2C25534C9D0034BB22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63C85A3525534CA20034BB22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -101,6 +111,8 @@
 		6392CD9025541C0D005E0831 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				6392CDE025543EC6005E0831 /* Base */,
+				6392CDDB25543E4B005E0831 /* FileManager.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -135,6 +147,31 @@
 			path = ProductDetail;
 			sourceTree = "<group>";
 		};
+		6392CDCD25543CE6005E0831 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				6392CDCE25543D08005E0831 /* product.json */,
+				6392CDD625543D3E005E0831 /* social.json */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		6392CDE025543EC6005E0831 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				6392CDE125543ED3005E0831 /* FileManagerError.swift */,
+				6392CDF225546CA1005E0831 /* FileManagerResponse.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		6392CDE625543F60005E0831 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		63C85A2025534C9D0034BB22 = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +195,8 @@
 		63C85A2B25534C9D0034BB22 /* dolap-ios-case-study */ = {
 			isa = PBXGroup;
 			children = (
+				6392CDE625543F60005E0831 /* Extensions */,
+				6392CDCD25543CE6005E0831 /* Resource */,
 				6392CDAB25543687005E0831 /* Controller */,
 				6392CD9125541C14005E0831 /* Model */,
 				6392CD9025541C0D005E0831 /* Service */,
@@ -293,7 +332,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				63C85A3925534CA20034BB22 /* LaunchScreen.storyboard in Resources */,
+				6392CDCF25543D08005E0831 /* product.json in Resources */,
 				63C85A3625534CA20034BB22 /* Assets.xcassets in Resources */,
+				6392CDD725543D3E005E0831 /* social.json in Resources */,
 				6392CDA02554265C005E0831 /* Product.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,10 +364,13 @@
 				6392CDB6255436DC005E0831 /* ProductDetailModels.swift in Sources */,
 				6392CDB5255436DC005E0831 /* ProductDetailRouter.swift in Sources */,
 				6392CDB3255436DC005E0831 /* ProductDetailPresenter.swift in Sources */,
+				6392CDDC25543E4B005E0831 /* FileManager.swift in Sources */,
 				6392CD9325541CBD005E0831 /* Product.swift in Sources */,
 				6392CDC925543929005E0831 /* SceneDelegate.swift in Sources */,
+				6392CDE225543ED3005E0831 /* FileManagerError.swift in Sources */,
 				63C85A2D25534C9D0034BB22 /* AppDelegate.swift in Sources */,
 				6392CDB8255436DC005E0831 /* ProductDetailInteractor.swift in Sources */,
+				6392CDF325546CA1005E0831 /* FileManagerResponse.swift in Sources */,
 				6392CDB7255436DC005E0831 /* ProductDetailViewController.swift in Sources */,
 				6392CDB4255436DC005E0831 /* ProductDetailWorker.swift in Sources */,
 			);

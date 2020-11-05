@@ -19,3 +19,5 @@ struct Product: Codable {
     let image: String
     let price: Price
 }
+
+// CodingKeys eklenebilir

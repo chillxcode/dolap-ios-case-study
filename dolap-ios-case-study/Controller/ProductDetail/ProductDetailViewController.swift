@@ -59,3 +59,5 @@ class ProductDetailViewController: UIViewController, ProductDetailDisplayLogic {
         //nameTextField.text = viewModel.name
     }
 }
+
+// https://www.youtube.com/watch?v=Qh1Sxict3io
