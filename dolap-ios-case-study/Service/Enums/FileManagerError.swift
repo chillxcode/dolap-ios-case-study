@@ -10,5 +10,5 @@ import Foundation
 enum FileManagerError: Swift.Error {
     case notFound
     case fileNotReadable
-    case fileConversion
+    case fileDecode
 }

@@ -9,16 +9,41 @@
 import UIKit
 
 protocol ProductDetailPresentationLogic {
-    func presentSomething(response: ProductDetail.Something.Response)
+    func presentProduct(response: ProductDetail.GetProduct.Response)
+    func presentSocial(response: ProductDetail.GetSocial.Response)
+    func presentLoading()
+    func hideLoading()
 }
 
 class ProductDetailPresenter: ProductDetailPresentationLogic {
     weak var viewController: ProductDetailDisplayLogic?
     
-    // MARK: Do something
-    
-    func presentSomething(response: ProductDetail.Something.Response) {
-        let viewModel = ProductDetail.Something.ViewModel()
-        viewController?.displaySomething(viewModel: viewModel)
+    func presentProduct(response: ProductDetail.GetProduct.Response) {
+        if let error = response.error {
+            viewController?.displayError(error: error); return
+        }
+        guard let product = response.product?.model else {
+            viewController?.displayEmpty(); return
+        }
+        viewController?.displayProduct(product: product)
     }
+    
+    func presentSocial(response: ProductDetail.GetSocial.Response) {
+        if let error = response.error {
+            viewController?.displayError(error: error); return
+        }
+        guard let social = response.social?.model else {
+            viewController?.displayEmpty(); return
+        }
+        viewController?.displaySocial(social: social)
+    }
+    
+    func presentLoading() {
+        viewController?.displayLoading()
+    }
+    
+    func hideLoading() {
+        viewController?.hideLoading()
+    }
+    
 }

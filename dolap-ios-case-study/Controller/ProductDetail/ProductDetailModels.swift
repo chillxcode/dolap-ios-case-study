@@ -9,16 +9,31 @@
 import Foundation
 
 enum ProductDetail {
-    // MARK: Use cases
     
-    enum Something {
+    enum GetProduct {
         struct Request {
         }
         
         struct Response {
+            var product: FileManagerResponse<Product>?
+            var error: FileManagerError?
         }
         
         struct ViewModel {
         }
     }
+    
+    enum GetSocial {
+        struct Request {
+        }
+        
+        struct Response {
+            var social: FileManagerResponse<Social>?
+            var error: FileManagerError?
+        }
+        
+        struct ViewModel {
+        }
+    }
+    
 }

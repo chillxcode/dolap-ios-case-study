@@ -17,13 +17,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default" translatesAutoresizingMaskIntoConstraints="NO" id="1us-ZT-QWH">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image-default" translatesAutoresizingMaskIntoConstraints="NO" id="1us-ZT-QWH">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="1us-ZT-QWH" secondAttribute="height" multiplier="3:2" id="G7u-Ws-SCt"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stradivarius" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3T5-iT-ZnP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3T5-iT-ZnP">
                                 <rect key="frame" x="16" y="274" width="281" height="23.5"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -38,8 +38,11 @@
                                         <inset key="imageEdgeInsets" minX="4" minY="2" maxX="4" maxY="4"/>
                                         <state key="normal" image="like"/>
                                         <state key="selected" image="liked"/>
+                                        <connections>
+                                            <action selector="likeButtonTouchUpInside:" destination="Pd2-PM-HbD" eventType="touchUpInside" id="RUy-E6-pc1"/>
+                                        </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="129" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KN6-v8-6Ww">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KN6-v8-6Ww">
                                         <rect key="frame" x="0.0" y="29" width="30" height="16"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="16" id="diV-jH-ROU"/>
@@ -54,7 +57,7 @@
                                     <constraint firstAttribute="width" constant="30" id="hfk-qv-ZJN"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Npx-jB-bYH">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Npx-jB-bYH">
                                 <rect key="frame" x="16" y="305.5" width="15" height="14"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14" id="4jw-iL-kBf"/>
@@ -88,8 +91,8 @@
                                     <constraint firstAttribute="width" constant="60" id="yQW-t3-FTc"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="( 26 yorum )" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QeY-St-3ml">
-                                <rect key="frame" x="99" y="305" width="65.5" height="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QeY-St-3ml">
+                                <rect key="frame" x="99" y="305" width="4" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="yfK-N0-6MR"/>
                                 </constraints>
@@ -97,8 +100,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="180,00 TL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9q-gG-55T">
-                                <rect key="frame" x="16" y="335.5" width="78" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t9q-gG-55T">
+                                <rect key="frame" x="16" y="335.5" width="5.5" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="8oO-zD-LOw"/>
                                 </constraints>
@@ -150,6 +153,22 @@
                             <constraint firstItem="LTC-LS-xJO" firstAttribute="leading" secondItem="3T5-iT-ZnP" secondAttribute="trailing" constant="32" id="yjf-Xz-9IJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="averageRatingLabel" destination="Npx-jB-bYH" id="Sel-L3-5QK"/>
+                        <outlet property="commentCountLabel" destination="QeY-St-3ml" id="nWn-gm-Owf"/>
+                        <outlet property="counterBackView" destination="PEB-iT-3XO" id="IcV-Ka-xjk"/>
+                        <outlet property="counterLabel" destination="H5p-U9-MtZ" id="qiu-7N-SQP"/>
+                        <outlet property="imageView" destination="1us-ZT-QWH" id="9xT-Tx-R8X"/>
+                        <outlet property="likeButton" destination="Rsi-0T-cd1" id="Sp1-Ub-V9T"/>
+                        <outlet property="likeCountLabel" destination="KN6-v8-6Ww" id="dpU-Sq-VcV"/>
+                        <outlet property="nameDescLabel" destination="3T5-iT-ZnP" id="iNL-Nh-zEu"/>
+                        <outlet property="priceLabel" destination="t9q-gG-55T" id="Qqi-L8-JjQ"/>
+                        <outletCollection property="ratingImageViews" destination="Pfn-mr-9Fe" collectionClass="NSMutableArray" id="uKj-2l-her"/>
+                        <outletCollection property="ratingImageViews" destination="Hr8-tz-yfv" collectionClass="NSMutableArray" id="4z7-uI-2zq"/>
+                        <outletCollection property="ratingImageViews" destination="0PV-Z8-ha9" collectionClass="NSMutableArray" id="OLf-Xn-Ygw"/>
+                        <outletCollection property="ratingImageViews" destination="zvE-tA-Nop" collectionClass="NSMutableArray" id="D4b-8I-8Ky"/>
+                        <outletCollection property="ratingImageViews" destination="i8l-KH-Cld" collectionClass="NSMutableArray" id="eWr-Qj-dBx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W2F-zA-bhn" sceneMemberID="firstResponder"/>
             </objects>
@@ -157,7 +176,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="default" width="620" height="600"/>
+        <image name="image-default" width="620" height="600"/>
         <image name="like" width="512" height="512"/>
         <image name="liked" width="435.73699951171875" height="435.73699951171875"/>
         <image name="star" width="511" height="511"/>

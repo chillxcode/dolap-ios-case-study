@@ -9,10 +9,27 @@
 import UIKit
 
 protocol ProductDetailDisplayLogic: class {
-    func displaySomething(viewModel: ProductDetail.Something.ViewModel)
+    func displayProduct(product: Product)
+    func displaySocial(social: Social)
+    func displayLoading()
+    func hideLoading()
+    func displayError(error: FileManagerError)
+    func displayEmpty()
 }
 
-class ProductDetailViewController: UIViewController, ProductDetailDisplayLogic {
+final class ProductDetailViewController: UIViewController, ProductDetailDisplayLogic {
+ 
+    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private weak var nameDescLabel: UILabel!
+    @IBOutlet private weak var averageRatingLabel: UILabel!
+    @IBOutlet private weak var commentCountLabel: UILabel!
+    @IBOutlet private weak var likeCountLabel: UILabel!
+    @IBOutlet private weak var priceLabel: UILabel!
+    @IBOutlet private var ratingImageViews: [UIImageView]!
+    @IBOutlet private weak var counterBackView: UIView!
+    @IBOutlet private weak var counterLabel: UILabel!
+    @IBOutlet private weak var likeButton: UIButton!
+    
     var interactor: ProductDetailBusinessLogic?
     var router: (NSObjectProtocol & ProductDetailRoutingLogic & ProductDetailDataPassing)?
     
@@ -47,17 +64,66 @@ class ProductDetailViewController: UIViewController, ProductDetailDisplayLogic {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        doSomething()
+        getProduct()
+        getSocial()
     }
     
-    func doSomething() {
-        let request = ProductDetail.Something.Request()
-        interactor?.doSomething(request: request)
+    @IBAction func likeButtonTouchUpInside(_ sender: Any) {
+        likeButton.isSelected = !likeButton.isSelected
     }
     
-    func displaySomething(viewModel: ProductDetail.Something.ViewModel) {
-        //nameTextField.text = viewModel.name
+    private func getProduct() {
+        let request = ProductDetail.GetProduct.Request()
+        interactor?.fetchProduct(request: request)
     }
+    
+    private func getSocial() {
+        let request = ProductDetail.GetSocial.Request()
+        interactor?.fetchSocial(request: request)
+    }
+    
+    
+    // MARK: Presenter Funcs
+    func displayProduct(product: Product) {
+        nameDescLabel.text = "\(product.name) - \(product.desc)"
+        priceLabel.text = "\(product.price.value) \(product.price.currency)"
+        imageView.imageFromUrl(urlString: product.image)
+    }
+    
+    func displaySocial(social: Social) {
+        likeCountLabel.text = "\(social.likeCount)"
+        let totalComment = Int(social.commentCounts.anonymousCommentsCount) + Int(social.commentCounts.memberCommentsCount)
+        commentCountLabel.text = "( \(totalComment) yorum )"
+        averageRatingLabel.text = "\(social.commentCounts.averageRating)"
+    }
+    
+    func displayLoading() {
+        self.view.showLoading()
+    }
+    
+    func hideLoading() {
+        self.view.stopLoading()
+    }
+    
+    func displayError(error: FileManagerError) {
+        switch error {
+        case .notFound:
+            alert(message: "File not found")
+            break
+        case .fileNotReadable:
+            alert(message: "File not readable")
+            break
+        case .fileDecode:
+            alert(message: "File decode error")
+            break
+        }
+    }
+    
+    func displayEmpty() {
+        alert(message: "Empty")
+    }
+    
+    
 }
 
 // https://www.youtube.com/watch?v=Qh1Sxict3io

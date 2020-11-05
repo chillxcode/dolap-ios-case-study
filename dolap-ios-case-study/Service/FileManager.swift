@@ -12,19 +12,19 @@ typealias Error = (FileManagerError) -> Void
 
 class FileManager {
     
-    func get<T: Codable>(fileName: String,
+    func get<T: Codable>(filePath: FilePath,
                          onSuccess: @escaping Success<T>,
                          onError: @escaping Error) {
         let decoder = JSONDecoder()
         
-        guard let url = Bundle.main.url(forResource: fileName, withExtension: "json") else {
+        guard let url = Bundle.main.url(forResource: filePath.rawValue, withExtension: "json") else {
             onError(.notFound); return
         }
         guard let data = try? Data(contentsOf: url) else {
             onError(.fileNotReadable); return
         }
         guard let model = try? decoder.decode(T.self as T.Type, from: data) else {
-            onError(.fileConversion); return
+            onError(.fileDecode); return
         }
         onSuccess(FileManagerResponse.init(model: model, message: ""))
     }

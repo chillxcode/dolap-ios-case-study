@@ -8,7 +8,7 @@
 import Foundation
 
 struct CommentDetail: Codable {
-    let averageRating: Int
+    let averageRating: Double
     let anonymousCommentsCount: Int
     let memberCommentsCount: Int
 }

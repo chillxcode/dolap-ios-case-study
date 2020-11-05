@@ -9,7 +9,8 @@
 import UIKit
 
 protocol ProductDetailBusinessLogic {
-    func doSomething(request: ProductDetail.Something.Request)
+    func fetchProduct(request: ProductDetail.GetProduct.Request)
+    func fetchSocial(request: ProductDetail.GetSocial.Request)
 }
 
 protocol ProductDetailDataStore {
@@ -19,15 +20,40 @@ protocol ProductDetailDataStore {
 class ProductDetailInteractor: ProductDetailBusinessLogic, ProductDetailDataStore {
     var presenter: ProductDetailPresentationLogic?
     var worker: ProductDetailWorker?
-    //var name: String = ""
+    private var isLoading: Bool = false
     
-    // MARK: Do something
-    
-    func doSomething(request: ProductDetail.Something.Request) {
+    func fetchProduct(request: ProductDetail.GetProduct.Request) {
+        if !isLoading {
+            presenter?.presentLoading(); isLoading = true
+        }
         worker = ProductDetailWorker()
-        worker?.doSomeWork()
-        
-        let response = ProductDetail.Something.Response()
-        presenter?.presentSomething(response: response)
+        worker?.getProduct(onSuccess: { (productResponse) in
+            self.presenter?.hideLoading()
+            self.isLoading = true
+            let response = ProductDetail.GetProduct.Response(product: productResponse, error: nil)
+            self.presenter?.presentProduct(response: response)
+        }, onError: { (fileManagerError) in
+            self.presenter?.hideLoading()
+            let response = ProductDetail.GetProduct.Response(product: nil, error: fileManagerError)
+            self.presenter?.presentProduct(response: response)
+        })
     }
+    
+    func fetchSocial(request: ProductDetail.GetSocial.Request) {
+        if !isLoading {
+            presenter?.presentLoading(); isLoading = true
+        }
+        worker = ProductDetailWorker()
+        worker?.getSocial(onSuccess: { (socialResponse) in
+            self.presenter?.hideLoading()
+            self.isLoading = true
+            let response = ProductDetail.GetSocial.Response(social: socialResponse, error: nil)
+            self.presenter?.presentSocial(response: response)
+        }, onError: { (fileManagerError) in
+            self.presenter?.hideLoading()
+            let response = ProductDetail.GetSocial.Response(social: nil, error: fileManagerError)
+            self.presenter?.presentSocial(response: response)
+        })
+    }
+
 }
