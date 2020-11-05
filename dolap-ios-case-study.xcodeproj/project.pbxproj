@@ -7,10 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6392CD9325541CBD005E0831 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392CD9225541CBD005E0831 /* Product.swift */; };
+		6392CD9B25541E2B005E0831 /* Social.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392CD9A25541E2B005E0831 /* Social.swift */; };
+		6392CDA02554265C005E0831 /* Product.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6392CD9F2554265C005E0831 /* Product.storyboard */; };
+		6392CDB3255436DC005E0831 /* ProductDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392CDAD255436DC005E0831 /* ProductDetailPresenter.swift */; };
+		6392CDB4255436DC005E0831 /* ProductDetailWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392CDAE255436DC005E0831 /* ProductDetailWorker.swift */; };
+		6392CDB5255436DC005E0831 /* ProductDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392CDAF255436DC005E0831 /* ProductDetailRouter.swift */; };
+		6392CDB6255436DC005E0831 /* ProductDetailModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392CDB0255436DC005E0831 /* ProductDetailModels.swift */; };
+		6392CDB7255436DC005E0831 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392CDB1255436DC005E0831 /* ProductDetailViewController.swift */; };
+		6392CDB8255436DC005E0831 /* ProductDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392CDB2255436DC005E0831 /* ProductDetailInteractor.swift */; };
+		6392CDC925543929005E0831 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392CDC825543929005E0831 /* SceneDelegate.swift */; };
 		63C85A2D25534C9D0034BB22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C85A2C25534C9D0034BB22 /* AppDelegate.swift */; };
-		63C85A2F25534C9D0034BB22 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C85A2E25534C9D0034BB22 /* SceneDelegate.swift */; };
-		63C85A3125534C9D0034BB22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C85A3025534C9D0034BB22 /* ViewController.swift */; };
-		63C85A3425534C9D0034BB22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63C85A3225534C9D0034BB22 /* Main.storyboard */; };
 		63C85A3625534CA20034BB22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63C85A3525534CA20034BB22 /* Assets.xcassets */; };
 		63C85A3925534CA20034BB22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63C85A3725534CA20034BB22 /* LaunchScreen.storyboard */; };
 		63C85A4425534CA30034BB22 /* dolap_ios_case_studyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C85A4325534CA30034BB22 /* dolap_ios_case_studyTests.swift */; };
@@ -35,11 +42,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6392CD9225541CBD005E0831 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		6392CD9A25541E2B005E0831 /* Social.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Social.swift; sourceTree = "<group>"; };
+		6392CD9F2554265C005E0831 /* Product.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Product.storyboard; sourceTree = "<group>"; };
+		6392CDAD255436DC005E0831 /* ProductDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailPresenter.swift; sourceTree = "<group>"; };
+		6392CDAE255436DC005E0831 /* ProductDetailWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailWorker.swift; sourceTree = "<group>"; };
+		6392CDAF255436DC005E0831 /* ProductDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailRouter.swift; sourceTree = "<group>"; };
+		6392CDB0255436DC005E0831 /* ProductDetailModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailModels.swift; sourceTree = "<group>"; };
+		6392CDB1255436DC005E0831 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
+		6392CDB2255436DC005E0831 /* ProductDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailInteractor.swift; sourceTree = "<group>"; };
+		6392CDC825543929005E0831 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		63C85A2925534C9D0034BB22 /* dolap-ios-case-study.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dolap-ios-case-study.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C85A2C25534C9D0034BB22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		63C85A2E25534C9D0034BB22 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		63C85A3025534C9D0034BB22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		63C85A3325534C9D0034BB22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		63C85A3525534CA20034BB22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63C85A3825534CA20034BB22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63C85A3A25534CA20034BB22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,6 +90,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6392CD8F25541BC8005E0831 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				6392CD9F2554265C005E0831 /* Product.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		6392CD9025541C0D005E0831 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		6392CD9125541C14005E0831 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6392CD9225541CBD005E0831 /* Product.swift */,
+				6392CD9A25541E2B005E0831 /* Social.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6392CDAB25543687005E0831 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6392CDAC25543694005E0831 /* ProductDetail */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6392CDAC25543694005E0831 /* ProductDetail */ = {
+			isa = PBXGroup;
+			children = (
+				6392CDAD255436DC005E0831 /* ProductDetailPresenter.swift */,
+				6392CDAE255436DC005E0831 /* ProductDetailWorker.swift */,
+				6392CDAF255436DC005E0831 /* ProductDetailRouter.swift */,
+				6392CDB0255436DC005E0831 /* ProductDetailModels.swift */,
+				6392CDB1255436DC005E0831 /* ProductDetailViewController.swift */,
+				6392CDB2255436DC005E0831 /* ProductDetailInteractor.swift */,
+			);
+			path = ProductDetail;
+			sourceTree = "<group>";
+		};
 		63C85A2025534C9D0034BB22 = {
 			isa = PBXGroup;
 			children = (
@@ -99,10 +158,12 @@
 		63C85A2B25534C9D0034BB22 /* dolap-ios-case-study */ = {
 			isa = PBXGroup;
 			children = (
+				6392CDAB25543687005E0831 /* Controller */,
+				6392CD9125541C14005E0831 /* Model */,
+				6392CD9025541C0D005E0831 /* Service */,
+				6392CD8F25541BC8005E0831 /* Storyboard */,
 				63C85A2C25534C9D0034BB22 /* AppDelegate.swift */,
-				63C85A2E25534C9D0034BB22 /* SceneDelegate.swift */,
-				63C85A3025534C9D0034BB22 /* ViewController.swift */,
-				63C85A3225534C9D0034BB22 /* Main.storyboard */,
+				6392CDC825543929005E0831 /* SceneDelegate.swift */,
 				63C85A3525534CA20034BB22 /* Assets.xcassets */,
 				63C85A3725534CA20034BB22 /* LaunchScreen.storyboard */,
 				63C85A3A25534CA20034BB22 /* Info.plist */,
@@ -233,7 +294,7 @@
 			files = (
 				63C85A3925534CA20034BB22 /* LaunchScreen.storyboard in Resources */,
 				63C85A3625534CA20034BB22 /* Assets.xcassets in Resources */,
-				63C85A3425534C9D0034BB22 /* Main.storyboard in Resources */,
+				6392CDA02554265C005E0831 /* Product.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +319,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63C85A3125534C9D0034BB22 /* ViewController.swift in Sources */,
+				6392CD9B25541E2B005E0831 /* Social.swift in Sources */,
+				6392CDB6255436DC005E0831 /* ProductDetailModels.swift in Sources */,
+				6392CDB5255436DC005E0831 /* ProductDetailRouter.swift in Sources */,
+				6392CDB3255436DC005E0831 /* ProductDetailPresenter.swift in Sources */,
+				6392CD9325541CBD005E0831 /* Product.swift in Sources */,
+				6392CDC925543929005E0831 /* SceneDelegate.swift in Sources */,
 				63C85A2D25534C9D0034BB22 /* AppDelegate.swift in Sources */,
-				63C85A2F25534C9D0034BB22 /* SceneDelegate.swift in Sources */,
+				6392CDB8255436DC005E0831 /* ProductDetailInteractor.swift in Sources */,
+				6392CDB7255436DC005E0831 /* ProductDetailViewController.swift in Sources */,
+				6392CDB4255436DC005E0831 /* ProductDetailWorker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +364,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		63C85A3225534C9D0034BB22 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				63C85A3325534C9D0034BB22 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		63C85A3725534CA20034BB22 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -439,6 +499,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZG5R3ALCJD;
 				INFOPLIST_FILE = "dolap-ios-case-study/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -458,6 +519,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZG5R3ALCJD;
 				INFOPLIST_FILE = "dolap-ios-case-study/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
