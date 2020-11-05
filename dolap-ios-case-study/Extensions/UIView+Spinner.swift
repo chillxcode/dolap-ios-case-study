@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 extension UIView {
-static let loadingViewTag = 1938123987
+static let loadingViewTag = 314159265359
     
     func showLoading(style: UIActivityIndicatorView.Style = .medium) {
         var loading = viewWithTag(UIView.loadingViewTag) as? UIActivityIndicatorView

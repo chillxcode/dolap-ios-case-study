@@ -29,11 +29,12 @@ class ProductDetailInteractor: ProductDetailBusinessLogic, ProductDetailDataStor
         worker = ProductDetailWorker()
         worker?.getProduct(onSuccess: { (productResponse) in
             self.presenter?.hideLoading()
-            self.isLoading = true
+            self.isLoading = false
             let response = ProductDetail.GetProduct.Response(product: productResponse, error: nil)
             self.presenter?.presentProduct(response: response)
         }, onError: { (fileManagerError) in
             self.presenter?.hideLoading()
+            self.isLoading = false
             let response = ProductDetail.GetProduct.Response(product: nil, error: fileManagerError)
             self.presenter?.presentProduct(response: response)
         })
@@ -46,11 +47,12 @@ class ProductDetailInteractor: ProductDetailBusinessLogic, ProductDetailDataStor
         worker = ProductDetailWorker()
         worker?.getSocial(onSuccess: { (socialResponse) in
             self.presenter?.hideLoading()
-            self.isLoading = true
+            self.isLoading = false
             let response = ProductDetail.GetSocial.Response(social: socialResponse, error: nil)
             self.presenter?.presentSocial(response: response)
         }, onError: { (fileManagerError) in
             self.presenter?.hideLoading()
+            self.isLoading = false
             let response = ProductDetail.GetSocial.Response(social: nil, error: fileManagerError)
             self.presenter?.presentSocial(response: response)
         })

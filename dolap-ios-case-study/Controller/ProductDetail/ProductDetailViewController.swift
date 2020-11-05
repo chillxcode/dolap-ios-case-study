@@ -26,9 +26,14 @@ final class ProductDetailViewController: UIViewController, ProductDetailDisplayL
     @IBOutlet private weak var likeCountLabel: UILabel!
     @IBOutlet private weak var priceLabel: UILabel!
     @IBOutlet private var ratingImageViews: [UIImageView]!
-    @IBOutlet private weak var counterBackView: UIView!
+    @IBOutlet weak var counterBackView: CircularProgressView!
     @IBOutlet private weak var counterLabel: UILabel!
     @IBOutlet private weak var likeButton: UIButton!
+    
+    private var timer: Timer?
+    private var counter: Int = 0
+    private let socialRefreshTime = 6
+    private var isLiked: Bool = false
     
     var interactor: ProductDetailBusinessLogic?
     var router: (NSObjectProtocol & ProductDetailRoutingLogic & ProductDetailDataPassing)?
@@ -64,11 +69,43 @@ final class ProductDetailViewController: UIViewController, ProductDetailDisplayL
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupView()
         getProduct()
         getSocial()
     }
     
+    private func setupView() {
+        counterBackView.createCircularPath()
+        counterBackView.setProgressWithAnimation(duration: 0, value: 0)
+    }
+    
+    @objc
+    private func countTime() {
+        counter += 1
+        counterLabel.text = "\(counter)"
+        counterBackView.setProgressWithAnimation(duration: 0, value: Float(counter) / Float(socialRefreshTime))
+        if counter == socialRefreshTime {
+            killTimer()
+            getSocial()
+        }
+    }
+    
+    private func killTimer() {
+        timer?.invalidate()
+        timer = nil
+        counterLabel.text = "0"
+        counterBackView.setProgressWithAnimation(duration: 0, value: 0)
+    }
+    
     @IBAction func likeButtonTouchUpInside(_ sender: Any) {
+        if likeButton.isSelected {
+            isLiked = false
+            likeCountLabel.text = "\((Int(likeCountLabel.text ?? "1") ?? 1) - 1)"
+        }
+        else {
+            isLiked = true
+            likeCountLabel.text = "\((Int(likeCountLabel.text ?? "-1") ?? -1) + 1)"
+        }
         likeButton.isSelected = !likeButton.isSelected
     }
     
@@ -82,19 +119,53 @@ final class ProductDetailViewController: UIViewController, ProductDetailDisplayL
         interactor?.fetchSocial(request: request)
     }
     
+    private func setRatingStars(rating: Int) {
+        if rating == 0 { return }
+        for i in 0...rating {
+            ratingImageViews[i].tintColor = #colorLiteral(red: 0.9755776525, green: 0.6595294476, blue: 0.1456838846, alpha: 1)
+        }
+    }
+    
+    private func setTitleLabel(name: String, description: String) {
+        let headingAttribute = [ NSAttributedString.Key.font: UIFont(name: "AvenirNext-DemiBold", size: 17.0)! ]
+        let headingAttrString = NSAttributedString(string: name, attributes: headingAttribute)
+        
+        let contentAttribute = [ NSAttributedString.Key.font: UIFont(name: "AvenirNext-Regular", size: 15.0)! ]
+        let contentAttrString = NSAttributedString(string: " \(description)", attributes: contentAttribute)
+        
+        let combination = NSMutableAttributedString()
+
+        combination.append(headingAttrString)
+        combination.append(contentAttrString)
+        
+        nameDescLabel.attributedText = combination
+    }
+    
     
     // MARK: Presenter Funcs
     func displayProduct(product: Product) {
-        nameDescLabel.text = "\(product.name) - \(product.desc)"
+        setTitleLabel(name: product.name, description: product.desc)
         priceLabel.text = "\(product.price.value) \(product.price.currency)"
         imageView.imageFromUrl(urlString: product.image)
     }
     
     func displaySocial(social: Social) {
-        likeCountLabel.text = "\(social.likeCount)"
+        if isLiked {
+            likeCountLabel.text = "\(social.likeCount + 1)"
+        }
+        else {
+            likeCountLabel.text = "\(social.likeCount)"
+        }
+        
         let totalComment = Int(social.commentCounts.anonymousCommentsCount) + Int(social.commentCounts.memberCommentsCount)
         commentCountLabel.text = "( \(totalComment) yorum )"
         averageRatingLabel.text = "\(social.commentCounts.averageRating)"
+        setRatingStars(rating: Int(social.commentCounts.averageRating))
+        timer = Timer.scheduledTimer(timeInterval:1,
+                                     target:self,
+                                     selector:#selector(countTime),
+                                     userInfo: nil, repeats: true)
+        counter = 0
     }
     
     func displayLoading() {
@@ -123,7 +194,4 @@ final class ProductDetailViewController: UIViewController, ProductDetailDisplayL
         alert(message: "Empty")
     }
     
-    
 }
-
-// https://www.youtube.com/watch?v=Qh1Sxict3io
