@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -125,7 +124,6 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="3g4-4S-otJ"/>
                                     <constraint firstItem="H5p-U9-MtZ" firstAttribute="leading" secondItem="PEB-iT-3XO" secondAttribute="leading" id="WCK-Yj-58f"/>
@@ -183,8 +181,8 @@
     </scenes>
     <resources>
         <image name="image-default" width="620" height="600"/>
-        <image name="like" width="512" height="512"/>
-        <image name="liked" width="435.73699951171875" height="435.73699951171875"/>
+        <image name="like" width="436" height="436"/>
+        <image name="liked" width="436" height="436"/>
         <image name="star" width="511" height="511"/>
         <namedColor name="Background">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -195,8 +193,5 @@
         <namedColor name="Title">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>

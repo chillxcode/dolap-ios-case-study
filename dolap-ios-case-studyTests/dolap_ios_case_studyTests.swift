@@ -8,26 +8,31 @@
 import XCTest
 @testable import dolap_ios_case_study
 
+// Clean-Swift/TDD için unit test yapılabilir. (WorkerSpy, WorkerTests vs.)
 class dolap_ios_case_studyTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
+    func testProductDecoding() throws {
+        let bundle = Bundle(for: type(of: self))
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+        guard let url = bundle.url(forResource: "product", withExtension: "json") else {
+            XCTFail("Missing file: product.json"); return
         }
+        
+        let jsonData = try Data(contentsOf: url)
+
+        XCTAssertNoThrow(try JSONDecoder().decode(Product.self, from: jsonData))
+    }
+    
+    func testSocialDecoding() throws {
+        let bundle = Bundle(for: type(of: self))
+
+        guard let url = bundle.url(forResource: "social", withExtension: "json") else {
+            XCTFail("Missing file: social.json"); return
+        }
+        
+        let jsonData = try Data(contentsOf: url)
+
+        XCTAssertNoThrow(try JSONDecoder().decode(Social.self, from: jsonData))
     }
 
 }

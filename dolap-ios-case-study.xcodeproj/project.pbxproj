@@ -27,6 +27,12 @@
 		6392CDE225543ED3005E0831 /* FileManagerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392CDE125543ED3005E0831 /* FileManagerError.swift */; };
 		6392CDF325546CA1005E0831 /* FileManagerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392CDF225546CA1005E0831 /* FileManagerResponse.swift */; };
 		6392CE02255475F3005E0831 /* FilePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392CE01255475F3005E0831 /* FilePath.swift */; };
+		63C52BA32554A81F00AF1702 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392CDDB25543E4B005E0831 /* FileManager.swift */; };
+		63C52BA72554A83E00AF1702 /* product.json in Resources */ = {isa = PBXBuildFile; fileRef = 6392CDCE25543D08005E0831 /* product.json */; };
+		63C52BAB2554A84100AF1702 /* social.json in Resources */ = {isa = PBXBuildFile; fileRef = 6392CDD625543D3E005E0831 /* social.json */; };
+		63C52BAF2554A84400AF1702 /* FileManagerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392CDF225546CA1005E0831 /* FileManagerResponse.swift */; };
+		63C52BB32554A84700AF1702 /* FileManagerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392CDE125543ED3005E0831 /* FileManagerError.swift */; };
+		63C52BB72554A84A00AF1702 /* FilePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392CE01255475F3005E0831 /* FilePath.swift */; };
 		63C85A2D25534C9D0034BB22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C85A2C25534C9D0034BB22 /* AppDelegate.swift */; };
 		63C85A3625534CA20034BB22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63C85A3525534CA20034BB22 /* Assets.xcassets */; };
 		63C85A3925534CA20034BB22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63C85A3725534CA20034BB22 /* LaunchScreen.storyboard */; };
@@ -374,6 +380,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63C52BAB2554A84100AF1702 /* social.json in Resources */,
+				63C52BA72554A83E00AF1702 /* product.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +425,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				63C85A4425534CA30034BB22 /* dolap_ios_case_studyTests.swift in Sources */,
+				63C52BB72554A84A00AF1702 /* FilePath.swift in Sources */,
+				63C52BA32554A81F00AF1702 /* FileManager.swift in Sources */,
+				63C52BB32554A84700AF1702 /* FileManagerError.swift in Sources */,
+				63C52BAF2554A84400AF1702 /* FileManagerResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,7 +587,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZG5R3ALCJD;
 				INFOPLIST_FILE = "dolap-ios-case-study/Info.plist";
@@ -587,7 +599,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chillxcode.dolap-ios-case-study";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -595,7 +607,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZG5R3ALCJD;
 				INFOPLIST_FILE = "dolap-ios-case-study/Info.plist";
@@ -607,7 +619,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.chillxcode.dolap-ios-case-study";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
