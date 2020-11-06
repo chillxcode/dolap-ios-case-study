@@ -8,7 +8,7 @@
 import XCTest
 @testable import dolap_ios_case_study
 
-// Clean-Swift/TDD için unit test yapılabilir. (WorkerSpy, WorkerTests vs.)
+// Unit testing can be done for Clean-Swift / TDD. (WorkerSpy, WorkerTests etc.)
 class dolap_ios_case_studyTests: XCTestCase {
 
     func testProductDecoding() throws {
