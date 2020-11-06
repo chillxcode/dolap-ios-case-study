@@ -10,13 +10,13 @@ import Foundation
 typealias Success<T : Codable> = (FileManagerResponse<T>) -> Void
 typealias Error = (FileManagerError) -> Void
 
-class FileManager {
+class FileManager: IFileManager {
     
     func get<T: Codable>(filePath: FilePath,
                          onSuccess: @escaping Success<T>,
                          onError: @escaping Error) {
         let decoder = JSONDecoder()
-        
+
         guard let url = Bundle.main.url(forResource: filePath.rawValue, withExtension: "json") else {
             onError(.notFound); return
         }

@@ -13,7 +13,8 @@ protocol ProductDetailDisplayLogic: class {
     func displaySocial(social: Social)
     func displayLoading()
     func hideLoading()
-    func displayError(error: FileManagerError)
+    func displayError(message: String)
+//    func displayError(error: FileManagerError)
     func displayEmpty()
 }
 
@@ -34,6 +35,7 @@ final class ProductDetailViewController: UIViewController, ProductDetailDisplayL
     private var counter: Int = 0
     private let socialRefreshTime = 6
     private var isLiked: Bool = false
+    private var likeCount: Int = 0
     
     var interactor: ProductDetailBusinessLogic?
     var router: (NSObjectProtocol & ProductDetailRoutingLogic & ProductDetailDataPassing)?
@@ -98,14 +100,8 @@ final class ProductDetailViewController: UIViewController, ProductDetailDisplayL
     }
     
     @IBAction func likeButtonTouchUpInside(_ sender: Any) {
-        if likeButton.isSelected {
-            isLiked = false
-            likeCountLabel.text = "\((Int(likeCountLabel.text ?? "1") ?? 1) - 1)"
-        }
-        else {
-            isLiked = true
-            likeCountLabel.text = "\((Int(likeCountLabel.text ?? "-1") ?? -1) + 1)"
-        }
+        isLiked = !likeButton.isSelected
+        setLikeCountLabel()
         likeButton.isSelected = !likeButton.isSelected
     }
     
@@ -123,6 +119,18 @@ final class ProductDetailViewController: UIViewController, ProductDetailDisplayL
         if rating == 0 { return }
         for i in 0...rating {
             ratingImageViews[i].tintColor = #colorLiteral(red: 0.9755776525, green: 0.6595294476, blue: 0.1456838846, alpha: 1)
+        }
+    }
+    
+    private func setLikeCountLabel() {
+        if likeCount == 0 {
+            likeCountLabel.text = "-"
+        }
+        else if isLiked {
+            likeCountLabel.text = "\(likeCount + 1)"
+        }
+        else {
+            likeCountLabel.text = "\(likeCount)"
         }
     }
     
@@ -150,13 +158,8 @@ final class ProductDetailViewController: UIViewController, ProductDetailDisplayL
     }
     
     func displaySocial(social: Social) {
-        if isLiked {
-            likeCountLabel.text = "\(social.likeCount + 1)"
-        }
-        else {
-            likeCountLabel.text = "\(social.likeCount)"
-        }
-        
+        likeCount = social.likeCount
+        setLikeCountLabel()
         let totalComment = Int(social.commentCounts.anonymousCommentsCount) + Int(social.commentCounts.memberCommentsCount)
         commentCountLabel.text = "( \(totalComment) yorum )"
         averageRatingLabel.text = "\(social.commentCounts.averageRating)"
@@ -176,18 +179,8 @@ final class ProductDetailViewController: UIViewController, ProductDetailDisplayL
         self.view.stopLoading()
     }
     
-    func displayError(error: FileManagerError) {
-        switch error {
-        case .notFound:
-            alert(message: "File not found")
-            break
-        case .fileNotReadable:
-            alert(message: "File not readable")
-            break
-        case .fileDecode:
-            alert(message: "File decode error")
-            break
-        }
+    func displayError(message: String) {
+        alert(message: message)
     }
     
     func displayEmpty() {

@@ -27,17 +27,18 @@
 		6392CDE225543ED3005E0831 /* FileManagerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392CDE125543ED3005E0831 /* FileManagerError.swift */; };
 		6392CDF325546CA1005E0831 /* FileManagerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392CDF225546CA1005E0831 /* FileManagerResponse.swift */; };
 		6392CE02255475F3005E0831 /* FilePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392CE01255475F3005E0831 /* FilePath.swift */; };
-		63C52BA32554A81F00AF1702 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392CDDB25543E4B005E0831 /* FileManager.swift */; };
 		63C52BA72554A83E00AF1702 /* product.json in Resources */ = {isa = PBXBuildFile; fileRef = 6392CDCE25543D08005E0831 /* product.json */; };
 		63C52BAB2554A84100AF1702 /* social.json in Resources */ = {isa = PBXBuildFile; fileRef = 6392CDD625543D3E005E0831 /* social.json */; };
-		63C52BAF2554A84400AF1702 /* FileManagerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392CDF225546CA1005E0831 /* FileManagerResponse.swift */; };
-		63C52BB32554A84700AF1702 /* FileManagerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392CDE125543ED3005E0831 /* FileManagerError.swift */; };
-		63C52BB72554A84A00AF1702 /* FilePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392CE01255475F3005E0831 /* FilePath.swift */; };
 		63C85A2D25534C9D0034BB22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C85A2C25534C9D0034BB22 /* AppDelegate.swift */; };
 		63C85A3625534CA20034BB22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63C85A3525534CA20034BB22 /* Assets.xcassets */; };
 		63C85A3925534CA20034BB22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63C85A3725534CA20034BB22 /* LaunchScreen.storyboard */; };
 		63C85A4425534CA30034BB22 /* dolap_ios_case_studyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C85A4325534CA30034BB22 /* dolap_ios_case_studyTests.swift */; };
 		63C85A4F25534CA30034BB22 /* dolap_ios_case_studyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C85A4E25534CA30034BB22 /* dolap_ios_case_studyUITests.swift */; };
+		63E9B902255554BE00998E31 /* IFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E9B901255554BE00998E31 /* IFileManager.swift */; };
+		63E9B9432555591F00998E31 /* FileManagerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392CDE125543ED3005E0831 /* FileManagerError.swift */; };
+		63E9B9472555592700998E31 /* FilePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392CE01255475F3005E0831 /* FilePath.swift */; };
+		63E9B94B2555592B00998E31 /* FileManagerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392CDF225546CA1005E0831 /* FileManagerResponse.swift */; };
+		63E9B94F2555592F00998E31 /* IFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E9B901255554BE00998E31 /* IFileManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		63C85A4A25534CA30034BB22 /* dolap-ios-case-studyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "dolap-ios-case-studyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C85A4E25534CA30034BB22 /* dolap_ios_case_studyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dolap_ios_case_studyUITests.swift; sourceTree = "<group>"; };
 		63C85A5025534CA30034BB22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63E9B901255554BE00998E31 /* IFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IFileManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 				6392CE00255475DC005E0831 /* Enums */,
 				6392CDE025543EC6005E0831 /* Base */,
 				6392CDDB25543E4B005E0831 /* FileManager.swift */,
+				63E9B901255554BE00998E31 /* IFileManager.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -231,12 +234,11 @@
 		63C85A2B25534C9D0034BB22 /* dolap-ios-case-study */ = {
 			isa = PBXGroup;
 			children = (
+				63E9B9142555567F00998E31 /* Core */,
 				6359E330255492790049DE77 /* View */,
-				6392CDE625543F60005E0831 /* Extensions */,
 				6392CDCD25543CE6005E0831 /* Resource */,
 				6392CDAB25543687005E0831 /* Controller */,
 				6392CD9125541C14005E0831 /* Model */,
-				6392CD9025541C0D005E0831 /* Service */,
 				6392CD8F25541BC8005E0831 /* Storyboard */,
 				63C85A2C25534C9D0034BB22 /* AppDelegate.swift */,
 				6392CDC825543929005E0831 /* SceneDelegate.swift */,
@@ -263,6 +265,15 @@
 				63C85A5025534CA30034BB22 /* Info.plist */,
 			);
 			path = "dolap-ios-case-studyUITests";
+			sourceTree = "<group>";
+		};
+		63E9B9142555567F00998E31 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				6392CDE625543F60005E0831 /* Extensions */,
+				6392CD9025541C0D005E0831 /* Service */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,6 +417,7 @@
 				6359E32C25548CCE0049DE77 /* UIView+Spinner.swift in Sources */,
 				6392CDB3255436DC005E0831 /* ProductDetailPresenter.swift in Sources */,
 				6359E31F2554889F0049DE77 /* UIImageView+URL.swift in Sources */,
+				63E9B902255554BE00998E31 /* IFileManager.swift in Sources */,
 				6392CE02255475F3005E0831 /* FilePath.swift in Sources */,
 				6392CDDC25543E4B005E0831 /* FileManager.swift in Sources */,
 				6392CD9325541CBD005E0831 /* Product.swift in Sources */,
@@ -424,11 +436,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63E9B94F2555592F00998E31 /* IFileManager.swift in Sources */,
+				63E9B94B2555592B00998E31 /* FileManagerResponse.swift in Sources */,
+				63E9B9472555592700998E31 /* FilePath.swift in Sources */,
+				63E9B9432555591F00998E31 /* FileManagerError.swift in Sources */,
 				63C85A4425534CA30034BB22 /* dolap_ios_case_studyTests.swift in Sources */,
-				63C52BB72554A84A00AF1702 /* FilePath.swift in Sources */,
-				63C52BA32554A81F00AF1702 /* FileManager.swift in Sources */,
-				63C52BB32554A84700AF1702 /* FileManagerError.swift in Sources */,
-				63C52BAF2554A84400AF1702 /* FileManagerResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -631,7 +643,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZG5R3ALCJD;
 				INFOPLIST_FILE = "dolap-ios-case-studyTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -653,7 +665,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZG5R3ALCJD;
 				INFOPLIST_FILE = "dolap-ios-case-studyTests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

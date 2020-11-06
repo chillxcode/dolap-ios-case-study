@@ -20,4 +20,4 @@ struct Product: Codable {
     let price: Price
 }
 
-// CodingKeys eklenebilir
+// CodingKeys can be added

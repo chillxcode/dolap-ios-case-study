@@ -9,12 +9,12 @@
 import Foundation
 
 class ProductDetailWorker {
+    let manager: IFileManager = FileManager()
     
     func getProduct(onSuccess: @escaping(FileManagerResponse<Product>) -> Void,
                     onError: @escaping(FileManagerError) -> Void) {
-        let manager = FileManager()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            manager.get(filePath: .product) { (response: FileManagerResponse<Product>) in
+            self.manager.get(filePath: .product) { (response: FileManagerResponse<Product>) in
                 onSuccess(response)
             } onError: { (error) in
                 onError(error)
@@ -24,9 +24,8 @@ class ProductDetailWorker {
     
     func getSocial(onSuccess: @escaping(FileManagerResponse<Social>) -> Void,
                     onError: @escaping(FileManagerError) -> Void) {
-        let manager = FileManager()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            manager.get(filePath: .social) { (response: FileManagerResponse<Social>) in
+            self.manager.get(filePath: .social) { (response: FileManagerResponse<Social>) in
                 onSuccess(response)
             } onError: { (error) in
                 onError(error)
